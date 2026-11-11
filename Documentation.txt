@@ -1,0 +1,51 @@
+Dokumentation och inlämning: Java-filerna samt de filer som behövs för att kompilera och köra programmet.
+
+Lämna in enligt lärarens anvisning på Itslearning, exempelvis som en zip-fil med projektfiler och PDF.
+
+Länk till Git-repository eller en tydlig uppgift om hur läraren får tillgång till Git-historiken.
+    https://github.com/sixwil/diceGame
+
+
+
+En kort PDF (cirka 1–2 sidor) med:
+
+    spelregler
+        Det är ett gissning-spel, där användaren gissar vilken sida en tärning kommer att landa på och får +1 poäng om de gissar rätt.
+
+    hur man startar spelet
+        Kör main filen "DiceGame.java", den tar hand om resten.
+
+    klasser
+        generalValues är typ global variables
+        gameSettings är det som frågar och håller koll på hur många rundor och sidor användaren vill ha, och vad de vill kallas
+    
+    metoder
+        DiceGame.main() är min motor som sätter up gameSettings och sedan kör själva frågespelet.
+        StubbornInput() är min metod som ser till att användaren skickar in en giltig respons, tx har den ett argument som säger om den kräver att string-en ska kunna tolkas som en INT eller inte.
+
+    några viktiga kodval samt test- och felsökningsarbete.
+        Jag gjorde att min StubbornInput() kan ha en try catch med att försöka parse-a response string-en till en int, och om det inte går ber den användaren att försöka igen med responsen.
+
+    En individuell bidragsrapport från varje student, även vid pararbete.
+
+
+
+Individuell bidragsrapport (cirka ½-1 sida):
+
+    Vad har du själv gjort i projektet?.
+        På grund av att jag inte lyckats nå min projekt partner har jag gjort allt själv.
+
+    Vilken del av koden kan du förklara särskilt väl?.
+        Allt i DiceGame.java, de andra 2 java filer fick vi mer strikta regler som jag har följt men inte alltid kan motivera varför.
+
+    Vilket problem eller vilken bugg arbetade du med, och hur löste du den?.
+        Jag använder StubbornInput() som generell input, och därför hanteras alltid dess return som en string, MEN det finns ett argument som kan kolla att string-en måste kunna tolkas som INT, även fast den return-as som en STRING.
+
+    Hur använde du Git under arbetet?.
+        Dåligt. Jag bad min projekt partner att skapa gitHub-en vilken han aldrig gjorde, detta gjorde att jag han göra klart hela koden innan jag gav upp på honom och skapade en egen github med bara en massiv commit.
+
+    Hur använde du AI? Hur kontrollerade du resultatet?.
+        Jag bad ai jämföra min kod med projektbeskrivningen, tx tog den upp att man inte ska kunna gissa en omöjlig sida på tärningen (som att gissa 10 på en 6-sidig tärning).
+
+    Vad lärde du dig, och vad skulle du förbättra om du hade mer tid?.
+        Hade jag gjort om detta hade jag kanske bakat in en snyggare lösning på ovan ^, just nu har jag att den aktiveras efter setup-en är klar via en boolean variabel, vilket funkar men jag tror det kanske märks att den lades till i efterhand.
